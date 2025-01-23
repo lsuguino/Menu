@@ -6,7 +6,7 @@ from PIL import Image, ImageTk
 # Main Window
 window = Tk()
 window.title('The best Menu')
-window.geometry('800x500')
+window.geometry('850x550')
 window.configure(bg='#FAEBD7')
 
 ttk.Separator(window, orient=HORIZONTAL).grid(row=0, columnspan=1, ipadx=500)
@@ -16,7 +16,53 @@ style.theme_use("clam")
 
 # Creating the label
 label_menu = Label(window, text="Our Menu", relief='flat',
-                   anchor=CENTER, font=('Poppins', 35), bg='#FAEBD7', fg='black')
-label_menu.place(x=270, y=50)
+                   anchor=CENTER, font=('Poppins 35 bold'), bg='#FAEBD7', fg='black')
+label_menu.place(x=265, y=20)
+
+# Images to menu
+
+image_menu = Image.open('images/chicken-salad.png')
+image_menu = image_menu.resize((220, 230))
+image_menu = ImageTk.PhotoImage(image_menu)
+image_menu2 = Label(image=image_menu,
+                    relief='flat', bg='#FAEBD7', fg='black')
+image_menu2.place(x=50, y=65)
+
+image_menu3 = Image.open('images/raspberry-pudding.png')
+image_menu3 = image_menu3.resize((180, 180))
+image_menu3 = ImageTk.PhotoImage(image_menu3)
+image_menu4 = Label(image=image_menu3,
+                    relief='flat', bg='#FAEBD7', fg='black')
+image_menu4.place(x=430, y=75)
+
+# Creating Dishes
+dish_name = Label(text='Dish Name:', relief='flat', anchor=CENTER, font=('Poppins 18 bold'), bg='#FAEBD7', fg='black')
+dish_name.place(x=10, y=300)
+
+# Description
+dish_description = Label(text='Description:', relief='flat', anchor=CENTER, font=('Poppins 18 bold'), bg='#FAEBD7', fg='black')
+dish_description.place(x=450, y=300)
+
+# Creating windows/buttons
+# B1 Starters
+button_menu_1 = Button(window, text='Starters', width=10, relief='raised', overrelief=RIDGE,
+                       compound=CENTER, anchor=CENTER, padx=5, font=("Poppins", 20), bg='white', fg='black')
+button_menu_1.place(x=650, y=20)
+
+# B2 Dishes
+button_menu_2 = Button(window, text='Dishes', width=10, relief='raised', overrelief=RIDGE,
+                       compound=CENTER, anchor=CENTER, padx=5, font=("Poppins", 20), bg='white', fg='black')
+button_menu_2.place(x=650, y=80)
+
+# B3 Desserts
+button_menu_3 = Button(window, text='Desserts', width=10, relief='raised', overrelief=RIDGE,
+                       compound=CENTER, anchor=CENTER, padx=5, font=("Poppins", 20), bg='white', fg='black')
+button_menu_3.place(x=650, y=140)
+
+# B4 Drinks
+button_menu_4 = Button(window, text='Drinks', width=10, relief='raised', overrelief=RIDGE, compound=CENTER, anchor=CENTER, padx=5, font=("Poppins", 20), bg='white', fg='black')
+button_menu_4.place(x=650, y=200)
+
+
 
 window.mainloop()
