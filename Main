@@ -29,7 +29,7 @@ image_menu2 = Label(image=image_menu,
 image_menu2.place(x=50, y=65)
 
 image_menu3 = Image.open('images/raspberry-pudding.png')
-image_menu3 = image_menu3.resize((180, 180))
+image_menu3 = image_menu3.resize((200, 180))
 image_menu3 = ImageTk.PhotoImage(image_menu3)
 image_menu4 = Label(image=image_menu3,
                     relief='flat', bg='#FAEBD7', fg='black')
@@ -39,9 +39,17 @@ image_menu4.place(x=430, y=75)
 dish_name = Label(text='Dish Name:', relief='flat', anchor=CENTER, font=('Poppins 18 bold'), bg='#FAEBD7', fg='black')
 dish_name.place(x=10, y=300)
 
+# Change Dish Name
+dish_name2 = Label(text='Chicken Salad', relief='flat', anchor=CENTER, font=('Poppins 15'), bg='#FAEBD7', fg='black')
+dish_name2.place(x=10, y=340)
+
 # Description
 dish_description = Label(text='Description:', relief='flat', anchor=CENTER, font=('Poppins 18 bold'), bg='#FAEBD7', fg='black')
 dish_description.place(x=450, y=300)
+
+# Change Dish Description
+dish_description2 = Label(text='Mix of leafs with onions, \n tomatoes, cheese and chicken', relief='flat', anchor=NW, font=('Poppins 15'), bg='#FAEBD7', fg='black')
+dish_description2.place(x=450, y=340)
 
 # Creating windows/buttons
 # B1 Starters
